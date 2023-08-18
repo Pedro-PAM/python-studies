@@ -1,0 +1,18 @@
+## Exercicio de laço de repetição
+num = 1
+for num in range(num, 21):
+    if num == 13:
+        continue
+    print("Andar...", num)
+
+## Mesmo exercicio, com while
+
+num2 = 1
+while num2 <= 21:
+    if num2 != 13:
+        print("Estamos no andar...", num2)
+    num2 += 1
+
+
+
+
