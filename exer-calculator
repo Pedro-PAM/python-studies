@@ -1,5 +1,5 @@
-#Exercio de calculadora utilizando função
-def calculadora(num1, num2, op):
+# Exercio de calculadora utilizando função
+def calculator(num1, num2, op):
     res = 0
     if op == 1:
         res = num1 + num2
@@ -15,5 +15,14 @@ def calculadora(num1, num2, op):
         return res
     else:
         return 0
-    
-        
+
+# input do usuario
+print("Entre com a operação desejada...(+,-,*,/)")
+op = int(input())
+print("Entre com o primeiro numero...")
+num1 = int(input())
+print("Entre com o segundo numero...")
+num2 = int(input())
+print(calculator(num1, num2, op))
+
+
