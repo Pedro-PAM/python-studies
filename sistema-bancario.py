@@ -1,5 +1,3 @@
-## Criar um sistema bancário com as operações: sacar, depositar e extrato.
-
 ## Menu
 print('''
       =============== MENU ==================
@@ -14,10 +12,12 @@ print('''
 opr = input()
 oprValid = True
 while(oprValid == True):
+    numSaque = 3
+    numDepo = 0
+    saldo = 0
     try:
         if opr == "s":
             saqueValid = True
-            numSaque = 3
             print("Escolha um valor para saque...")
             saque = int(input())
             while(saqueValid == True):
@@ -37,32 +37,31 @@ while(oprValid == True):
         elif opr == "d":
             print("Digite o valor de seu depósito.")
             saldo = int(input())
-            depositoValid = True
-            numDepo = 0
+            depositoValid = True            
             while(depositoValid == True):
                 try:
                     if saldo<=0:
                         print("Saldo inválido!")
                     else:
-                        depositoValid == False
-                        oprValid == False
+                        depositoValid = False
+                        oprValid = False
                         saldo += saldo
                         numDepo += 1
                         print("Depósito realizado com sucesso!")
                 except:
                     print("Insira um número positivo...")       
                              
-        elif opr == "e":
-            if (numSaque == 3 and numDepo == 0):
-                print("Não foram realizadas movimentações")
+        elif opr == "e":          
+            oprValid = False
+            if saldo == 0:
+                print("Não foram realizadas movimentações!")
             else:
-                print('''Seu saldo atual é R${saldo}.
-                            Foram realizados {numDepo} depósitos,
-                            e {numSaque} Saques.'''
-                      )
-            
+                print(f'''Seu saldo é de R${saldo},
+                      foram realizados {numDepo} depósitos,
+                      e {numSaque} saques.''')
         else:
             print("Selecione uma operação válida!")
     except:
         print("Selecione uma operação disponível...")
-
+    finally:
+        print("Saindo...")
