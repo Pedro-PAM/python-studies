@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "nome": "Produto A",
+      "marca": "Marca A",
+      "categoria": "Eletrônicos",
+      "preco": 99.99,
+      "quantidade_estoque": 50,
+      "disponivel_pronta_entrega": true
+    },
+    {
+      "id": 2,
+      "nome": "Produto B",
+      "marca": "Marca B",
+      "categoria": "Roupas",
+      "preco": 49.99,
+      "quantidade_estoque": 30,
+      "disponivel_pronta_entrega": false
+    },
+    {
+      "id": 3,
+      "nome": "Produto C",
+      "marca": "Marca C",
+      "categoria": "Acessórios",
+      "preco": 19.99,
+      "quantidade_estoque": 100,
+      "disponivel_pronta_entrega": true
+    }
+  ]
+  
